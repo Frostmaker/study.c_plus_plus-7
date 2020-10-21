@@ -13,7 +13,13 @@ using namespace std;
 int main() {
 
     setlocale(LC_ALL, "Rus");
-
+    int a[4] = { 1, 2, 3, 4 };
+    int b[4] = { 5, 6, 7, 8 };
+    int res[4] = { 0, 0, 0, 0 };
+    cout_matrix(a, 2);
+    cout_matrix(a, 2);
+    rotate_matrix(a, res, 2);
+    cout_matrix(res, 2);
     //system("pause");
     return 0;
 }

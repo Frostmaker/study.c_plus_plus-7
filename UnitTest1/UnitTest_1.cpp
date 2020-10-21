@@ -82,4 +82,35 @@ namespace UnitTest
 			Assert::AreEqual(vector_len(ar, 3), 0.0);
 		}
 	};
+
+
+	TEST_CLASS(CosSimilarityTest)
+	{
+	public:
+
+		TEST_METHOD(CosSimilarityTestMethod1)
+		{
+			int a[] = { 12, 5 };
+			int b[] = {3, 4};
+			Assert::AreEqual(cos_similarity(a, b, 2), 0.861538, 1e-4);
+		}
+	};
+
+
+	TEST_CLASS(MatrixMultipTest)
+	{
+	public:
+
+		TEST_METHOD(MatrixMultipTestMethod1)
+		{
+			int a[] = { 1, 2, 3, 4 };
+			int b[] = { 5, 6, 7, 8 };
+			int res[4];
+			int test_matrix[4] = {19, 22, 43, 50};
+			matrix_multip(a, b, res, 2);
+			for (int i{ 0 }; i < 2; i++) {
+				Assert::AreEqual(test_matrix[i], res[i]);
+			}
+		}
+	};
 }
